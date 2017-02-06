@@ -1,0 +1,26 @@
+<table>
+  <caption>게시판 만들기</caption>
+  <thead>
+    <th>글 번호</th>
+    <th>글쓴이</th>
+    <th>제목</th>
+    <th>내용</th>
+    <th>좋아요</th>
+  </thead>
+  <% @post.each do |post| %>
+  <tbody>
+    <tr>
+      <td><%= post.id %></td>
+      <td><%= post.title %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <!-- <td><%= link_to '자세히보기', post_show_path %></td> -->
+      <!-- <td><%= link_to '수정하기', post_edit_path %></td> -->
+      <!-- <td><%= link_to '삭제하기', post, method: delete, data : {confirm: '삭제할까요?' } %></td> -->
+    </tr>
+  </tbody>
+  <% end %>
+</table>
