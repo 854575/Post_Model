@@ -1,4 +1,7 @@
 class Group < ApplicationRecord
-  # validates :user_id, uniqueness => true
+  validates :name,
+    uniqueness: true, # 중복 제한
+    presence: true, # not nil
+    length: {maximum: 20} # 길이 제한
   has_many :usergroups
 end
