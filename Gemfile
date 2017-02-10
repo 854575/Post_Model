@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'sunspot_rails'
 gem 'validates_email_format_of'
 gem 'nokogiri'
 gem 'faker'

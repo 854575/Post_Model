@@ -8,13 +8,15 @@
     <th>좋아요</th>
   </thead>
   <% @post.each do |post| %>
+  <% @user.each do |user| %>
+  <% @like.each do |like| %>
   <tbody>
     <tr>
       <td><%= post.id %></td>
+      <td><%= user.name %></td>
       <td><%= post.title %></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= post.content %></td>
+      <td><%= like.self.count %></td>
     </tr>
     <tr>
       <td><%#= link_to '자세히보기', post_show_path %></td>
@@ -22,5 +24,7 @@
       <td><%#= link_to '삭제하기', post, method: delete, data : {confirm: '삭제할까요?' } %></td>
     </tr>
   </tbody>
+  <% end %>
+  <% end %>
   <% end %>
 </table>
